@@ -277,9 +277,64 @@ body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.detailproject p{
-  font-size: 1.2rem;
+.project-detail p{
+  font-size: 1.8rem;
   line-height: 1.6;
-  color: var(--black-color);
+  color:#6a6a6a;
   margin-bottom: 20px;
+  text-align: justify;
+}
+
+.pd-gambar{
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  margin-right: 25px;
+}
+.pd-logo{
+  width: auto;
+  height: 60px;
+  border-radius: 8px;
+  margin: 15px 25px;
+}
+.pd-gambar-grid{
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.pd-gambar-grid:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.pd-inbetween{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.pd-inbetween i{
+  font-size: 28px;
+  color: #555555;
+  margin: 0 15px;
+  align-self: center;
+  vertical-align: middle;
+}
+
+.pd-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+.pd-grid:hover {
+    opacity: 1; 
 }
