@@ -14,5 +14,17 @@ int main(){
 
     // firt commit testing giit 
 
+    // second commit testing git
+    for (int i = 0; i < 5; i++) {
+        cout << "Iteration " << i << endl;
+    }
+    return 0;
 
-}
+    // third commit testing git
+
+    while (true)
+    {
+        cout << "Inside infinite loop" << endl;
+        break; // Added break to prevent actual infinite loop
+    }
+    return 0; //end of third commit
