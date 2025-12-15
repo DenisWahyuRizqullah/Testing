@@ -276,3 +276,10 @@ body {
   text-align: right;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+.detailproject p{
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--black-color);
+  margin-bottom: 20px;
+}
