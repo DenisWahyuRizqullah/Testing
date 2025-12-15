@@ -12,7 +12,7 @@ int main(){
         
     }while(b<=10);
 
-    // firt commit testing 
+    // firt commit testing giit 
 
 
 }
