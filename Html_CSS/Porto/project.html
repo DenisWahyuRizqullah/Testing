@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/header.js" defer></script>
+    <script src="js/nav.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header-projects">
+        <div class="container">
+            <h2>My Projects</h2>
+        </div>
+        <div class="nav-container">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html">Beranda</a>
+                <a href="#project-face">Project</a>
+                <a href="#about">Tentang</a>
+                <a href="#skills">Keahlian</a>
+                <a href="#contact">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <!-- Search bar section-->
+        <section class="search-section" id="project-face">
+            <div class="container">
+                <div class="backward">
+                    <a href="index.html">
+                        <i class="fa-solid fa-arrow-left"></i> Back
+                    </a>    
+                </div>
+                <div class="search-wrapper">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search..">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section class="projects-section">
+            <div class="container">
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-tags="html,css,c++" data-title="Nama Project 1">
+                        <div class="project-image">
+                            <img src="assets/logo/telkomsel.png" alt="Project 1">
+                        </div>
+                        <div class="project-content">
+                            <h3>Auto tilt antenna</h3>
+                            <p class="project-date">2024</p>
+                            <p class="project-description">Performing rotation for antennas that can be remotely controlled.</p>
+                            <div class="project-tags">
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                            </div>
+                            <a href="project/project_1.html" class="project-link">Read More →</a>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card" data-tags="python, keras, tensorflow, kotlin" data-title="Nama Project 2">
+                        <div class="project-image">
+                            <img src="assets/logo/mandiri.png" alt="Project 2">
+                        </div>
+                        <div class="project-content">
+                            <h3>Red Blood Cell Detection</h3>
+                            <p class="project-date">2024/2025</p>
+                            <p class="project-description">Red Blood Cell Detection using Mobile Phone and Template Matching.</p>
+                            <div class="project-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Keras/TensorFlow</span>
+                                <span class="tech-tag">Kotlin</span>
+                            </div>
+                            <a href="#" class="project-link">Read More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card" data-tags="html,css" data-title="Nama Project 3">
+                        <div class="project-image">
+                            <img src="assets/logo/mandiri.png" alt="Project 3">
+                        </div>
+                        <div class="project-content">
+                            <h3>Village SMEs Digital Branding Website</h3>
+                            <p class="project-date">2024</p>
+                            <p class="project-description">Developed a website platform for village-based SMEs as part of a digital branding initiative.</p>
+                            <div class="project-tags">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                            </div>
+                            <a href="#" class="project-link">Read More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card" data-tags="c++" data-title="Nama Project 3">
+                        <div class="project-image">
+                            <img src="assets/logo/mandiri.png" alt="Project 3">
+                        </div>
+                        <div class="project-content">
+                            <h3>IoT Home Fire Monitoring</h3>
+                            <p class="project-date">2024</p>
+                            <p class="project-description">Developed an IoT-based home fire monitoring system.</p>
+                            <div class="project-tags">
+                                <span class="tech-tag">C++</span>
+                            </div>
+                            <a href="#" class="project-link">Read More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card" data-tags="python,c++" data-title="Nama Project 3">
+                        <div class="project-image">
+                            <img src="assets/logo/mandiri.png" alt="Project 3">
+                        </div>
+                        <div class="project-content">
+                            <h3>Weather Prediction for Plantations</h3>
+                            <p class="project-date">2024</p>
+                            <p class="project-description">Combining machine learning and embedded system to make accurate weather predictions for plantations.</p>
+                            <div class="project-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">C++</span>
+                            </div>
+                            <a href="#" class="project-link">Read More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card" data-tags="python,opencv,tensorflow" data-title="Nama Project 3">
+                        <div class="project-image">
+                            <img src="assets/logo/mandiri.png" alt="Project 3">
+                        </div>
+                        <div class="project-content">
+                            <h3>Resnet 50 + ViT Computer Vision</h3>
+                            <p class="project-date">2024</p>
+                            <p class="project-description">Using Vision Transformer as a backbone of Resnet 50 architecture for computer vision tasks.</p>
+                            <div class="project-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">TensorFlow</span>
+                            </div>
+                            <a href="#" class="project-link">Read More →</a>
+                        </div>
+                    </div>
+                    <!-- Project 7 -->
+                    <div class="project-card" data-tags="C++" data-title="Nama Project 3">
+                        <div class="project-image">
+                            <img src="assets/logo/mandiri.png" alt="Project 3">
+                        </div>
+                        <div class="project-content">
+                            <h3>Smart Home Lock</h3>
+                            <p class="project-date">2024</p>
+                            <p class="project-description">Smart home lock system using finger print sensor </p>
+                            <div class="project-tags">
+                                <span class="tech-tag">C++</span>
+                            </div>
+                            <a href="#" class="project-link">Read More →</a>
+                        </div>
+                    </div>
+                    <!-- Project 8 -->
+                    <!-- <div class="project-card" data-tags="HTML,CSS" data-title="Nama Project 3">
+                        <div class="project-image">
+                            <img src="assets/logo/mandiri.png" alt="Project 3">
+                        </div>
+                        <div class="project-content">
+                            <h3>Resnet 50 + ViT Computer Vision</h3>
+                            <p class="project-date">2024</p>
+                            <p class="project-description">Using Vision Transformer as a backbone of Resnet 50 architecture for computer vision tasks.</p>
+                            <div class="project-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">TensorFlow</span>
+                            </div>
+                            <a href="#" class="project-link">Read More →</a>
+                        </div>
+                    </div> -->
+                    <!-- Project 9 -->
+                    <!-- <div class="project-card" data-tags="HTML,CSS" data-title="Nama Project 3">
+                        <div class="project-image">
+                            <img src="assets/logo/mandiri.png" alt="Project 3">
+                        </div>
+                        <div class="project-content">
+                            <h3>Resnet 50 + ViT Computer Vision</h3>
+                            <p class="project-date">2024</p>
+                            <p class="project-description">Using Vision Transformer as a backbone of Resnet 50 architecture for computer vision tasks.</p>
+                            <div class="project-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">TensorFlow</span>
+                            </div>
+                            <a href="#" class="project-link">Read More →</a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tentang Saya</h3>
+                    <p>Lulusan Teknik Komputer dengan passion di bidang pengembangan sistem, analisis, dan solusi kreatif.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Hubungi Saya</h3>
+                    <p>deniswahyu26@gmail.com</p>
+                    <p>+62 823 3160 3633</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="about.html">Tentang</a></li>
+                        <li><a href="projects.html">Proyek</a></li>
+                        <li><a href="skills.html">Keahlian</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Denis Wahyu Rizqullah.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        searchInput.addEventListener('keyup', function () {
+            const keyword = this.value.toLowerCase();
+
+            projectCards.forEach(card => {
+                // ambil judul dari h3
+                const title = card.querySelector('.project-content h3').textContent.toLowerCase();
+
+                // ambil data-tags
+                const dataTags = (card.getAttribute('data-tags') || "").toLowerCase();
+
+                // ambil tags nyata dari <span class="tech-tag">
+                const tagElements = card.querySelectorAll('.tech-tag');
+                let realTags = "";
+                tagElements.forEach(t => realTags += t.textContent.toLowerCase() + " ");
+
+                // gabungkan semua field pencarian
+                const combined = title + " " + dataTags + " " + realTags;
+
+                // cek apakah keyword cocok
+                if (combined.includes(keyword)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

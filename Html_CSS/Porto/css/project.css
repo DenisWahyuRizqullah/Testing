@@ -1,0 +1,278 @@
+:root {
+  --primary-color: #1c6393;
+  --secondary-color: #2ecc71;
+  --font-family: 'Arial, sans-serif';
+  --black-color: #000000;
+  --bg-color:linear-gradient(to bottom right, #ffd96fa0, #7f7fd58c);
+  /* --bg-color: linear-gradient(to right, #f6d365, #fda085, #66cf8d, #57b0dd); */
+}
+
+body {
+  /* background: radial-gradient(circle, #ffe29f, #ffa751, #2f80ed); */
+  background: var(--bg-color);
+  padding-top: 70px; /* beri ruang untuk header tetap */
+}
+/* Header =============================*/
+
+.header-projects {
+  position: fixed;
+  display: flex;              /* aktifkan flexbox */
+  justify-content: space-between; /* pisahkan kiri-kanan */
+  align-items: center;        /* sejajarkan vertikal */
+  padding: 20px 40px;
+  background-color: #02020200;  /* contoh warna background */
+}
+
+.header-projects .container {
+  flex: 1;                    /* biar judul tetap di kiri */
+} 
+
+.header-projects h2 {
+  font-size: 24px;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.search-container {
+  display: flex;
+  gap: 8px;                   /* jarak antar input dan tombol */
+}
+
+.search-input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-btn {
+  padding: 6px 10px;
+  border: none;
+  background-color: #ffffff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Project section ============================*/
+.projects-section {
+  padding: 10px 0 10px;
+}
+
+.project-card{
+  position: relative;
+}
+
+.project-content{
+  font-family: 'roboto', sans-serif;
+  padding-bottom: 40px; /* beri ruang extra untuk link */
+}
+
+.project-date {
+  color: var(--black-color);
+  font-size: 0.8rem;
+  margin: 8px 0;
+}
+
+.project-link {
+  opacity: 1;
+  text-decoration: none;
+  color: var(--black-color); 
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 20px 30px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.project-image img{
+  width: 100px;
+  height: auto;
+  /* border-radius: 8px;
+  margin-bottom: 15px; */
+}
+
+/* search section ===========================*/
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  padding: 120px 10px 20px;
+  background-color: --bg-color;
+}
+
+.search-section .container {
+  display: flex;
+  justify-content: space-between; /* backward di kiri, search di kanan */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.backward {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.search-wrapper {
+  position: relative;             /* Membuat posisi relatif agar tombol bisa diposisikan absolut di dalamnya */
+  width: 100%;
+  max-width: 400px;               /* Batasi lebar maksimal agar tidak terlalu lebar */
+}
+
+.search-wrapper ::placeholder {
+    color: #9999999b;                    /* Warna placeholder */
+    position: relative;
+    left: 1%;
+}
+
+.search-input {
+  width: 100%;                    /* Input memenuhi lebar wrapper */
+  padding: 10px 40px 10px 12px;   /* Padding kanan besar agar tidak tertimpa tombol */
+  border: 1px solid #ccc;
+  border-radius: 25px;            /* Bentuk oval */
+  font-size: 16px;
+}
+
+.search-btn {
+  position: absolute;            /* Posisi absolut terhadap .search-wrapper */
+  right: 10px;                   /* Geser ke kanan */
+  top: 50%;                      /* Geser ke tengah vertikal */
+  transform: translateY(-50%);   /* Koreksi agar benar-benar di tengah */
+  background: none;              /* Tidak ada background */
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Navbar Project=============================== */
+
+/* ===== Header Wrapper ===== */
+.header {
+    position: fixed;       /* agar selalu di atas */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* ===== Hamburger Button ===== */
+.hamburger {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1100; /* di depan menu */
+}
+
+/* Garis-garis hamburger */
+.hamburger span {
+    width: 100%;  
+    height: 3px;
+    background: #000;
+    border-radius: 4px;
+    transition: 0.4s ease; /* animasi lembut garis */
+}
+
+/* ===== NAV MENU (hidden awalnya) ===== */
+.nav-menu {
+    position: absolute;
+    top: 70px;          /* posisi menu setelah header */
+    right: 20px;       
+    width: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 15px;
+    border-radius: 12px;
+
+    /* Glassmorphism */
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    opacity: 0;             /* fade in */
+    transform: translateY(-20px);   /* slide down from above */
+    pointer-events: none;   /* mencegah bisa diklik sebelum muncul */
+    transition: 0.4s ease;  /* animasi fade + slide */
+}
+
+/* Link dalam menu */
+.nav-menu a {
+    padding: 10px 0;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.4s ease;
+}
+
+/* ===== MENU ACTIVE (ketika dibuka) ===== */
+.nav-menu.active {
+    opacity: 1;                  /* fade in */
+    transform: translateY(0px);  /* slide turun */
+    pointer-events: auto;
+}
+
+/* Fade-in + slide untuk setiap link */
+.nav-menu.active a {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* ===== Hamburger transform menjadi X ===== */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9.3px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;                  /* garis tengah hilang */
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9.3px) rotate(-45deg);
+}
+
+
+/* Project  -----------------------------------*/
+
+.search-sectionProject {
+  display: flex;
+  justify-content: flex-start;
+  padding: 50px 10px 20px;
+  background-color: var(--bg-color);
+}
+
+.detailproject .container {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center;    /* Center the content vertically */
+  width: 100%;
+  max-width: 1200px;
+}
+
+.project-detail h2{
+  position: relative;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--black-color);
+}
+
+.detailproject {
+  max-width: 800px;
+  text-align: right;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
