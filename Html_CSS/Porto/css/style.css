@@ -1,5 +1,5 @@
 /* Global Styles */
-:root {
+:root[data-theme="light"] {
     --primary-color: #1a6c98;
     --secondary-color: #4A6FA5;
     --dark-color: #2A3F54;
@@ -8,9 +8,27 @@
     --text-color: #333;
     --light-text: #777;
     --bg-color:linear-gradient(to bottom right, #ffd96fa0, #7f7fd58c);
-    /* --bg-color: linear-gradient(135deg, #ece38797 0%, #fad0c4 50%, #a1c4fd 100%); */
-    /* --bg-color:linear-gradient(to bottom right, #ffd96fa0, #7f7ffddb); */
     --code-bg: #f5f5f5;
+    --icon-fill: #141414;
+    --icon-fill-hover: #1f1f1f;
+    --name-color: #2A3F54;
+    --outline-color: #1a6c98;
+}
+:root[data-theme="dark"]{
+    --primary-color: #8ba7c8;
+    --secondary-color: #50E3C2;
+    --dark-color: #2A3F54;
+    --light-color: #575757;
+    --accent-color: #E94E77;
+    --text-color: #d5d6d8;
+    --light-text: #c5c5c5;
+    /* --bg-color: linear-gradient(to bottom right, #232526, #434343); */
+    --bg-color:#282828;
+    --code-bg: #2D2D2D;
+    --icon-fill: #d4d4d4e0;
+    --icon-fill-hover: #c4c4c4;
+    --name-color: #8ba7c8;
+    --outline-color: #65c851;
 }
 
 * {
@@ -45,10 +63,10 @@
 }
 
 .header-project.scrolled {
-    background-color: #ffffff;
+    background-color: var(--light-color);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     transition: background-color 0.8s ease, backdrop-filter 0.8s ease;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 /* Optional: style supaya tetap terlihat rapi */
 header nav ul {
@@ -59,7 +77,7 @@ header nav ul {
 
 header nav a {
     text-decoration: none;
-    color: #333;
+    color: var(--text-color);
 }
 
 .header-container {
@@ -69,6 +87,97 @@ header nav a {
     padding: 0 20px;
 }
 
+/* Theme styling */
+
+
+@import "https://unpkg.com/open-props/easings.min.css";
+
+.sun-and-moon > :is(.moon, .sun, .sun-beams) {
+  transform-origin: center;
+}
+
+.sun-and-moon > :is(.moon, .sun) {
+  fill: var(--icon-fill);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: inherit;
+}
+
+.theme-toggle:is(:hover, :focus-visible) > .sun-and-moon > :is(.moon, .sun) {
+  fill: var(--icon-fill-hover);
+}
+
+.sun-and-moon > .sun-beams {
+  stroke: var(--icon-fill);
+  stroke-width: 2px;
+}
+
+.theme-toggle:is(:hover, :focus-visible) .sun-and-moon > .sun-beams {
+  stroke: var(--icon-fill-hover);
+}
+
+[data-theme="dark"] .sun-and-moon > .sun {
+  transform: scale(1.75);
+}
+
+[data-theme="dark"] .sun-and-moon > .sun-beams {
+  opacity: 0;
+}
+
+[data-theme="dark"] .sun-and-moon > .moon > circle {
+  transform: translateX(-7px);
+}
+
+@supports (cx: 1) {
+  [data-theme="dark"] .sun-and-moon > .moon > circle {
+    cx: 17;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sun-and-moon > .sun {
+    transition: transform .5s var(--ease-elastic-3);
+  }
+
+  .sun-and-moon > .sun-beams {
+    transition: transform .5s var(--ease-elastic-4), opacity .5s var(--ease-3);
+  }
+
+  .sun-and-moon .moon > circle {
+    transition: transform .25s var(--ease-out-5);
+  }
+
+  @supports (cx: 1) {
+    .sun-and-moon .moon > circle {
+      transition: cx .25s var(--ease-out-5);
+    }
+  }
+
+  [data-theme="dark"] .sun-and-moon > .sun {
+    transition-timing-function: var(--ease-3);
+    transition-duration: .25s;
+    transform: scale(1.75);
+  }
+
+  [data-theme="dark"] .sun-and-moon > .sun-beams {
+    transition-duration: .15s;
+    transform: rotateZ(-25deg);
+  }
+
+  [data-theme="dark"] .sun-and-moon > .moon > circle {
+    transition-duration: .5s;
+    transition-delay: .25s;
+  }
+}
+        
+
+/* Body Styles */
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--text-color);
@@ -236,7 +345,7 @@ nav ul li a.active:after {
     /* font-size: clamp(2.5rem, 5vw, 4.5rem); */
     font-size: 4rem;
     font-weight: 700;
-    color: var(--dark-color);
+    color: var(--name-color);
     margin-bottom: 5px;
     line-height: 1.1;
     font-family: 'Roboto', sans-serif;
@@ -351,7 +460,7 @@ nav ul li a.active:after {
 
 /* Ganti style project-card yang ada dengan ini */
 .project-card {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--code-bg);
     border-radius: 1px;
     padding: 25px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -730,7 +839,7 @@ section {
 }
 
 .skill-category {
-    background-color: white;
+    background-color: var(--code-bg);
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);

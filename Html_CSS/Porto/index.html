@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="js/modal.js" defer></script>
     <script src="js/header.js" defer></script>
+    <script src="js/theme.js" defer></script>
 </head>
 
 <body>
@@ -26,6 +27,25 @@
                     <li><a href="#" class="infoContact">Kontak</a></li>
                 </ul>
             </nav>
+            <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+                <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                    <mask class="moon" id="moon-mask">
+                        <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                        <circle cx="24" cy="10" r="6" fill="black" />
+                    </mask>
+                    <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" stroke-linecap="round"/>
+                    <g class="sun-beams" stroke="currentColor" fill="none" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </g>
+                </svg>
+            </button>
         </div>
     </header>
 
@@ -108,7 +128,7 @@
                     </div>
                     <div class="about-text">
                         <h3>BACKGROUND</h3>
-                        <p>I am an engineer with a background in Computer Engineering, specializing in building software–hardware integrated systems. My experience includes IoT development, embedded systems, computer vision, and web applications. These areas allow me to create solutions that are structured, efficient, and grounded in strong problem-solving principles.</p>
+                        <p>I am fresh graduate with a background in Computer Engineering, specializing in building software–hardware integrated systems. My experience includes IoT development, embedded systems, computer vision, and web applications. These areas allow me to create solutions that are structured, efficient, and grounded in strong problem-solving principles.</p>
                         
                         <p>As an engineer, I enjoy bridging the gap between technical execution and user experience. I believe that great products are not only engineered well but also intuitive to use. This perspective drives me to combine technical precision with thoughtful design principles to build scalable, efficient, and user-focused systems.</p>
                         

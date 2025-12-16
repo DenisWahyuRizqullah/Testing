@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects 2 - Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../js/header.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+</head>
+<body>
+    <main>
+
+        <section class="search-sectionProject" id="project-face">
+            <div class="container">
+                <div class="backward">
+                    <a href="../project.html">
+                        <i class="fa-solid fa-arrow-left"></i> Back
+                    </a>    
+                </div>
+            </div>
+        </section>
+
+        <section id="detailproject">
+            <div class="container">
+                <div class="project-detail">
+                    <div class="pd-inbetween">
+                        <img src="../assets/logo/mandiri.png" alt="telkomsel-logo" class="pd-logo">
+                    </div>
+                    <h2>Red Blood Cell Detection</h2> 
+                    <br><br>
+
+                    <p>This project focused on the development of a smartphone-based system for detecting and classifying white blood cells (WBC) from microscopic images. The research was conducted to address limitations of manual cell analysis, which is time-consuming, prone to human error, and less practical for high-throughput medical environments. By leveraging image processing and pattern recognition techniques, the system aimed to provide a faster, more accessible, and cost-effective diagnostic support tool, particularly for regions with limited medical facilities.</p>
+                    <p>The proposed system utilized the template matching method as the core detection approach due to its simplicity, flexibility, and low computational requirements. Unlike deep learning–based object detection methods that require intensive training and high computational resources, template matching allows object detection by comparing image patterns with predefined templates. This characteristic made it highly suitable for deployment on smartphone devices, enabling efficient processing without relying on high-end hardware.</p>
+                    <div style="justify-content: center; display: flex;">
+                        <img src="../assets/img/mandiri/red-blood/template-matching.png" alt="pd-red-blood" class="pd-gambar-grid">
+                    </div>
+
+                    <p>Microscopic image datasets of white blood cells were obtained from publicly available online sources and categorized into four cell types: neutrophils, lymphocytes, monocytes, and eosinophils. The system processed input images captured or selected via the smartphone camera, applied template matching to localize candidate cells, and displayed bounding boxes around detected regions. Performance optimization was conducted by evaluating different numbers of templates and threshold values to balance detection accuracy and computational efficiency.</p>
+
+                    <p>Experimental results demonstrated that the system achieved an average processing time of approximately 264.67 milliseconds per image, making it suitable for real-time or near real-time mobile applications. An optimal threshold value of 0.6 was identified, resulting in a detection accuracy of 85% while maintaining efficient computation. Additionally, using four templates was found to be the most effective configuration, offering the best trade-off between accuracy and processing speed without exceeding mobile device limitations.</p>
+                    
+                    <p>Overall, this project highlights the practical integration of computer vision, image analysis, and mobile computing for medical applications. The system demonstrates how lightweight algorithms such as template matching can be effectively utilized on resource-constrained devices to support medical diagnostics, improve accessibility, and reduce dependency on expensive laboratory equipment.</p>
+                    <br>
+                    <a href="" class="btn-outline" style="margin-bottom: 50px;">
+                        <i class="fa-solid fa-book"></i> View Report
+                    </a>
+                    <div class="pd-grid">
+                        <img src="../assets/img/mandiri/red-blood/rb1.jpeg" alt="pd-telkomsel" class="pd-gambar-grid">
+                        <img src="../assets/img/mandiri/red-blood/rb2.jpeg" alt="pd-telkomsel" class="pd-gambar-grid">
+                        <img src="../assets/img/mandiri/red-blood/rb3.jpeg" alt="pd-telkomsel" class="pd-gambar-grid">
+                        <img src="../assets/img/mandiri/red-blood/rb4.jpeg" alt="pd-telkomsel" class="pd-gambar-grid">
+                        <!-- <img src="../assets/img/mandiri/red-blood/rb5.jpeg" alt="pd-telkomsel" class="pd-gambar-grid"> -->
+                    </div>  
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tentang Saya</h3>
+                    <p>Lulusan Teknik Komputer dengan passion di bidang pengembangan sistem, analisis, dan solusi kreatif.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Hubungi Saya</h3>
+                    <p>deniswahyu26@gmail.com</p>
+                    <p>+62 823 3160 3633</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="about.html">Tentang</a></li>
+                        <li><a href="projects.html">Proyek</a></li>
+                        <li><a href="skills.html">Keahlian</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Denis Wahyu Rizqullah.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
