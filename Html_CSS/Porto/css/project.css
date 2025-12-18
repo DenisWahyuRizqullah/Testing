@@ -1,10 +1,12 @@
 :root[data-theme="light"] {
   --black-color: #000000;
   --bg-color:linear-gradient(to bottom right, #ffd96fa0, #7f7fd58c);
+  --text-color: #333;
 }
 
 :root[data-theme="dark"] {
   --black-color: #e6e6e6;
+  --text-color: #d5d6d8;
 }
 
 body {
@@ -20,7 +22,8 @@ body {
   justify-content: space-between; /* pisahkan kiri-kanan */
   align-items: center;        /* sejajarkan vertikal */
   padding: 20px 40px;
-  background-color: #02020200;  /* contoh warna background */
+  background-color: #cccaca6f;  /* contoh warna background */
+  backdrop-filter: blur(10px);  /* efek blur */
 }
 
 .header-projects .container {
@@ -177,7 +180,7 @@ body {
 .hamburger span {
     width: 100%;  
     height: 3px;
-    background: #000;
+    background: var(--text-color);
     border-radius: 4px;
     transition: 0.4s ease; /* animasi lembut garis */
 }
@@ -212,7 +215,7 @@ body {
 .nav-menu a {
     padding: 10px 0;
     text-decoration: none;
-    color: #000;
+    color: var(--text-color);
     font-weight: 500;
     opacity: 0;
     transform: translateY(10px);

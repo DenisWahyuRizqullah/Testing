@@ -12,12 +12,11 @@
     --icon-fill: #141414;
     --icon-fill-hover: #1f1f1f;
     --name-color: #2A3F54;
-    --outline-color: #1a6c98;
 }
 :root[data-theme="dark"]{
     --primary-color: #8ba7c8;
     --secondary-color: #50E3C2;
-    --dark-color: #2A3F54;
+    --dark-color: #7C8595;
     --light-color: #575757;
     --accent-color: #E94E77;
     --text-color: #d5d6d8;
@@ -28,7 +27,6 @@
     --icon-fill: #d4d4d4e0;
     --icon-fill-hover: #c4c4c4;
     --name-color: #8ba7c8;
-    --outline-color: #65c851;
 }
 
 * {
@@ -39,21 +37,31 @@
 }
 
 /* Header project================================ */
+
+.index .nav-container{
+    display: none;  /* default hidden */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+
+}
 .header-project{
     display: flex;              /* aktifkan flexbox */
-    justify-content: space-between; /* pisahkan kiri-kanan */
+    justify-content:space-between; /* pisahkan kiri-kanan */
     align-items: center;        /* sejajarkan vertikal */
     padding: 0px 5%;
     background-color: #ffffff00; 
 }
+
 @media (max-width: 600px) {
-    .header-project {
+    .header-container nav {
         padding: 0 16px;
+        display: none;
     }
-    header nav ul {
-        gap: 10px;
-        /* opacity: 0; */
-        flex-wrap: wrap;
+    .index .nav-container {
+        display: block;  /* tampilkan tombol nav */
     }
 }
 /* HEADER SETELAH SCROLL */
@@ -106,6 +114,7 @@ header nav a {
     cursor: pointer;
     padding: 0;
     color: inherit;
+    margin-left: 35px;
 }
 
 .theme-toggle:is(:hover, :focus-visible) > .sun-and-moon > :is(.moon, .sun) {
