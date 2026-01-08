@@ -1,0 +1,55 @@
+#include <iostream>
+#include <vector>
+#include <chrono>
+
+using namespace std;
+using namespace std::chrono;
+
+vector<vector<int>> perkalianMatriksBruteForce(const vector<vector<int>>& A, const vector<vector<int>>& B) {
+    int m = A.size();    // Jumlah baris pada matriks A
+    int n = B[0].size(); // Jumlah kolom pada matriks B
+    int p = B.size();    // Jumlah baris pada matriks B (sama dengan jumlah kolom pada matriks A)
+
+    vector<vector<int>> hasil(m, vector<int>(n, 0));
+
+    // Perkalian matriks secara brute force
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            for (int k = 0; k < p; k++) {
+                hasil[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+
+    return hasil;
+}
+
+int main() {
+    vector<vector<int>> A = {
+        {1, 2},
+        {3, 4}
+    };
+
+    vector<vector<int>> B = {
+        {5, 6},
+        {7, 8}
+    };
+
+    // Algoritma perkalian matriks secara brute force
+    auto start = high_resolution_clock::now();
+    vector<vector<int>> hasilBruteForce = perkalianMatriksBruteForce(A, B);
+    auto stop = high_resolution_clock::now();
+    auto durationBruteForce = duration_cast<microseconds>(stop - start);
+
+    cout << "Hasil perkalian matriks secara bruteforce : " << endl;
+    for (const auto& row : hasilBruteForce) {
+        for (const auto& elem : row) {
+            cout << elem << " ";
+        }
+        cout << endl;
+    }
+
+
+    return 0;
+    system("pause");
+}       
