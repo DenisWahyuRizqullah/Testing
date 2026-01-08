@@ -7,3 +7,7 @@ window.addEventListener("scroll", () => {
         header.classList.remove("scrolled");
     }
 });
+
+function maintainAlert(){
+    alert("The project is still under development. Some features may not work as expected. stay tuned for updates! :)");
+}
